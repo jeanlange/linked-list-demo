@@ -1,9 +1,9 @@
-class Car
-    attr_accessor :block
+class Node
+    attr_accessor :value
     attr_accessor :next
 
     def initialize
-        @block = nil
+        @value = nil
         @next = nil
     end
 end

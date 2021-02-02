@@ -1,25 +1,25 @@
-require './car'
+require './node'
 
-first = Car.new
+first = Node.new
 
-first.block = "red"
-first.next = Car.new
+first.value = "red"
+first.next = Node.new
 
-first.next.block = "blue"
-first.next.next = Car.new
+first.next.value = "blue"
+first.next.next = Node.new
 
-first.next.next.block = "yellow"
+first.next.next.value = "yellow"
 
 puts "Here is the linked list!"
 
 arrow = " -> "
 output_list = ""
-current_car = first
+current_node = first
 
-while current_car do
-    output_list << current_car.block
+while current_node do
+    output_list << current_node.value
     output_list << arrow
-    current_car = current_car.next
+    current_node = current_node.next
 end
 
 puts output_list
