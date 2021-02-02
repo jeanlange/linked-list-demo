@@ -18,6 +18,21 @@ class Node
         end
     end
 
+    def value_at steps_to_go
+        # are we at 0 steps to go?
+        if steps_to_go == 0
+            return @value
+        else
+            # pass the question on to the next node!
+            if @next
+                return @next.value_at(steps_to_go - 1)
+            else
+                # unless there is no next node, then give up
+                return nil
+            end
+        end
+    end
+
     def to_string
         print_string = ""
         print_string << @block
