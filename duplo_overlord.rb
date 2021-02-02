@@ -14,12 +14,13 @@ puts "Here is the linked list!"
 
 arrow = " -> "
 output_list = ""
-output_list << first.block
-output_list << arrow
-output_list << first.next.block
-output_list << arrow
-output_list << first.next.next.block
-output_list << arrow
+current_car = first
+
+while current_car do
+    output_list << current_car.block
+    output_list << arrow
+    current_car = current_car.next
+end
 
 puts output_list
 puts
