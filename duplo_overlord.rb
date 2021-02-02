@@ -12,15 +12,16 @@ first.next.next.value = "yellow"
 
 puts "Here is the linked list!"
 
-arrow = " -> "
-output_list = ""
-current_node = first
+puts first.to_string
+# arrow = " -> "
+# output_list = ""
+# current_node = first
 
-while current_node do
-    output_list << current_node.value
-    output_list << arrow
-    current_node = current_node.next
-end
+# while current_node do
+#     output_list << current_node.value
+#     output_list << arrow
+#     current_node = current_node.next
+# end
 
-puts output_list
+# puts output_list
 puts
