@@ -11,10 +11,15 @@ first.next.next = Car.new
 first.next.next.block = "yellow"
 
 puts "Here is the linked list!"
-puts first.block +
-    " -> " +
-    first.next.block +
-    " -> " +
-    first.next.next.block +
-    " -> "
+
+arrow = " -> "
+output_list = ""
+output_list << first.block
+output_list << arrow
+output_list << first.next.block
+output_list << arrow
+output_list << first.next.next.block
+output_list << arrow
+
+puts output_list
 puts
