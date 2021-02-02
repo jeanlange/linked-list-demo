@@ -7,6 +7,17 @@ class Node
         @next = nil
     end
 
+    def add new_value
+        if @value == nil
+            @value = new_value
+        else
+            if @next == nil
+                @next = Node.new
+            end
+            @next.add(new_value)
+        end
+    end
+
     def to_string
         print_string = ""
         print_string << @block
